@@ -1,18 +1,23 @@
+'''Web server'''
+
 import http.server
 import socketserver
 
 PORT = 8000
 
+'''Test class'''
 class TestMe():
-  def take_five(self):
-    return 5
-  def port(self):
-    return PORT
+    '''Take five unit test'''
+    def take_five(self):
+        return 5
 
+    '''Port unit test'''
+    def port(self):
+        return PORT
 
 if __name__ == '__main__':
-  Handler = http.server.SimpleHTTPRequestHandler
+    Handler = http.server.SimpleHTTPRequestHandler
 
-  with socketserver.TCPServer(("", PORT), Handler) as http:
-    print("serving at port", PORT)
-    http.serve_forever()
+    with socketserver.TCPServer(("", PORT), Handler) as http:
+        print("serving at port", PORT)
+        http.serve_forever()
