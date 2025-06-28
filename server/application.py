@@ -1,18 +1,19 @@
-'''Web server'''
+"""Web server"""
 
 import http.server
 import socketserver
 
 PORT = 8000
 
-'''Test class'''
 class TestMe():
-    '''Take five unit test'''
+    """Test class"""
+
     def take_five(self):
+        """Take five unit test"""
         return 5
 
-    '''Port unit test'''
     def port(self):
+        """Port unit test"""
         return PORT
 
 if __name__ == '__main__':

@@ -2,10 +2,10 @@ import pytest
 
 from application import TestMe
 
-'''Take five unit test'''
 def test_server():
+    """Take five unit test"""
     assert TestMe().take_five() == 5
 
-'''Port unit test'''
 def test_port():
+    """Port unit test"""
     assert TestMe().port() == 8000
